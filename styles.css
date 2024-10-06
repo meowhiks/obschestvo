@@ -33,6 +33,10 @@ html, body {
     display: none;
 }
 
+a, .logo {
+    user-select: none;
+}
+
 .menu__nav {
     position: absolute;
     display: flex;
