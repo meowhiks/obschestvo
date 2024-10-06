@@ -6,6 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hamburger.css">
+
+    <link rel="icon" href="logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,21 +22,37 @@
             <span class="logo__text">Партия<br>Возрождение</span>
         </div>
     </header>
+    <div class="menu">
+        <div class="menu__toggle">
+            <label>
+                <input type="checkbox" id="menu-input">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path class="line--1" d="M0 70l28-28c2-2 2-2 7-2h64"/>
+                    <path class="line--2" d="M0 50h99"/>
+                    <path class="line--3" d="M0 30l28 28c2 2 2 2 7 2h64"/>
+                </svg>
+            </label>
+        </div>
+        <nav class="menu__nav" id="menu-nav"></nav>
+    </div>
 
-    <nav class="nav">
-        <a href="#history">Наша История</a>
-        <a href="#about">О Нас</a>
-        <a href="#values">Ценности и Принципы</a>
-        <a href="#reforms">Программа Реформ</a>
+    <nav class="nav" id="nav">
+        <!-- On many mobile browsers work only full anchor links with website -->
+        <a href="https://meowhiks.github.io/obschestvo/#history">Наша История</a>
+        <a href="https://meowhiks.github.io/obschestvo/#about">О Нас</a>
+        <a href="https://meowhiks.github.io/obschestvo/#values">Ценности и Принципы</a>
+        <a href="https://meowhiks.github.io/obschestvo/#reforms">Программа Реформ</a>
     </nav>
 
     <div class="slider__line" id="marquee">
         <div class="slider__message">
-            Строим будущее
+            Белорусская Партия «Возрождение»
             <span class="circle"></span>
             Единство народа
             <span class="circle"></span>
-            Белорусская Партия «Возрождение»
+            Великое прошлое
+            <span class="circle"></span>
+            Большое будущее
             <span class="circle"></span>
             Единство нации
             <span class="circle"></span>
@@ -348,5 +367,6 @@
 
     <script src="marquee.js"></script>
     <script async src="scrollback.js"></script>
+    <script async src="menu.js"></script>
 </body>
 </html>

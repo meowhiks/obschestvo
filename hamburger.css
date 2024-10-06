@@ -1,0 +1,61 @@
+input {
+    display: none;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.menu__toggle label {
+    bottom: -75px;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    margin: -6px 0;
+    z-index: 10;
+}
+
+path {
+    fill: none;
+    stroke: var(--red-light);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    --length: 24;
+    --offset: -38;
+    stroke-dasharray: var(--length) var(--total-length);
+    stroke-dashoffset: var(--offset);
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.menu__toggle #menu-input:checked + svg .line--1, .menu__toggle #menu-input:checked + svg .line--3 {
+    --length: 22.627416998;
+}
+.menu__toggle #menu-input:checked + svg .line--2 {
+    --length: 0;
+}
+.back input:checked + svg .line--1, .back #menu-input:checked + svg .line--3 {
+    --length: 8.602325267;
+}
+.menu__toggle .line--1, .menu__toggle .line--3 {
+    --total-length: 111.2281341553;
+    --offset: -50.2281341553;
+}
+.menu__toggle .line--2 {
+    --total-length: 99;
+}
+.menu__toggle #menu-input:checked + svg path {
+    transform: translateX(30px);
+}
+.menu__toggle #menu-input:checked + svg .line--1, .menu__toggle #menu-input:checked + svg .line--3 {
+    --offset: -16.9705627485;
+}
+.menu__toggle #menu-input:checked + svg .line--2 {
+    --offset: -20;
+}
