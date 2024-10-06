@@ -139,8 +139,11 @@ nav a:hover::after {
     margin: 30px auto 0;
     border-radius: 15px;
     max-width: 1200px;
-    text-align: justify;
     position: relative;
+}
+
+.section p {
+    text-align: justify;
 }
 
 .section .anchor {
@@ -177,6 +180,7 @@ nav a:hover::after {
     border-bottom: 2px solid var(--red-dark);
     display: inline-block;
     padding-bottom: 10px;
+    text-align: left;
 }
 
 .section h3 {
@@ -186,9 +190,7 @@ nav a:hover::after {
 
 .section p, ul, ol {
     font-size: 18px;
-    line-height: 1.6;
     margin-bottom: 30px;
-    color: #333;
 }
 
 .section ul, ol {
@@ -231,6 +233,11 @@ nav a:hover::after {
     margin-bottom: 10px;
 }
 
+.section--reforms p strong {
+    display: inline-block;
+    text-align: left;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -241,4 +248,24 @@ footer {
 footer p {
     margin: 0;
     color: #666;
+}
+
+@media (max-width: 640px) {
+    .section--about div {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 425px) {
+    .section--history #gdl, #bpr {
+        display: block;
+        margin: 0 auto 10px;
+        float: unset;
+    }
+}
+
+@media (max-width: 375px) {
+    .section--history .section__image.h250 {
+        width: 100%;
+    }
 }
