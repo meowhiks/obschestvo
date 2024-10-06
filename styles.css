@@ -99,9 +99,10 @@ html, body {
     font-size: 18px;
     position: relative;
     padding: 5px 0;
+    cursor: pointer;
 }
 
-nav a::after, .menu__nav a::after {
+.nav a::after, .menu__nav a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -112,7 +113,7 @@ nav a::after, .menu__nav a::after {
     transition: width 0.3s;
 }
 
-nav a:hover::after {
+.nav a:hover::after {
     width: 100%;
 }
 
@@ -173,17 +174,10 @@ nav a:hover::after {
     margin: 30px auto 0;
     border-radius: 15px;
     max-width: 1200px;
-    position: relative;
 }
 
 .section p {
     text-align: justify;
-}
-
-.section .anchor {
-    position: absolute;
-    visibility: hidden;
-    top: -50px;
 }
 
 .section__image {
